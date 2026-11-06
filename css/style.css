@@ -519,6 +519,25 @@ a:focus-visible {
   letter-spacing: 0.06em;
 }
 
+.market-card__illustration,
+.listen-card__illustration,
+.route-card__illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin: 10px 0 6px;
+}
+
+.market-svg,
+.listen-svg,
+.route-svg {
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  max-height: 112px;
+}
+
 .visual-caption {
   position: absolute;
   right: 16px;

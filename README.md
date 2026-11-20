@@ -17,11 +17,11 @@ Buka `index.html` di browser. Tailwind CSS dan GSAP diambil dari CDN, jadi perlu
 ## Daftar tugas
 
 1. [ ] **Lengkapi profil Fahdin.** Perbarui lokasi, deskripsi, email, dan tahun setelah mendapat informasi yang disepakati.
-2. [ ] **Perbarui tautan sosial.** Ganti tautan Instagram dan LinkedIn dengan akun yang benar.
+2. [x] **Perbarui tautan sosial.** Ganti tautan Instagram dan LinkedIn dengan akun yang benar.
 3. [ ] **Buat halaman detail proyek.** Pilih satu karya, buat halaman ceritanya, lalu hubungkan dari halaman utama.
 4. [ ] **Ceritakan proses proyek.** Tambahkan latar belakang, peran, proses, dan hasil tanpa mengarang angka.
 5. [ ] **Buat visual proyek baru.** Ganti ilustrasi yang ada dengan visual berdasarkan bahan proyek dan beri keterangan yang jelas.
-6. [ ] **Rapikan navigasi di ponsel.** Pastikan semua tautan mudah digunakan dengan sentuhan dan keyboard.
+6. [x] **Rapikan navigasi di ponsel.** Pastikan semua tautan mudah digunakan dengan sentuhan dan keyboard.
 7. [x] **Tunjukkan bagian yang sedang dibaca.** Buat penanda navigasi yang membantu pengunjung mengetahui posisinya.
 8. [ ] **Tambahkan pengalaman.** Susun pengalaman kerja atau kolaborasi agar mudah dibaca.
 9. [x] **Lengkapi informasi kontak.** Tambahkan cara menghubungi Fahdin dan pastikan tautan email tetap berfungsi.

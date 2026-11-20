@@ -27,6 +27,7 @@
     </script>
   </head>
   <body class="is-loading bg-paper text-ink antialiased">
+    <a href="#main" class="skip-link">Lewati ke konten utama</a>
     <div class="loader" aria-hidden="true">
       <p class="loader__word">sedang disiapkan</p>
       <span class="loader__number">00</span>
@@ -34,20 +35,22 @@
     </div>
 
     <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="Fahdin, kembali ke awal">fahdin<span>.</span></a>
-      <nav class="main-nav" aria-label="Navigasi utama">
-        <a href="#about">Tentang</a>
-        <a href="#projects">Karya</a>
-        <a class="nav-contact" href="mailto:halo@fahdin.dev">Ngobrol
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </nav>
+      <div class="site-header__inner">
+        <a class="wordmark" href="#home" aria-label="Fahdin, kembali ke awal">fahdin<span>.</span></a>
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a class="nav-link" href="#about">Tentang</a>
+          <a class="nav-link" href="#projects">Karya</a>
+          <a class="nav-link nav-contact" href="#contact">Ngobrol
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero page-wrap" id="home" aria-labelledby="hero-title">
         <div class="hero__eyebrow">
           <span class="eyebrow-line"></span>

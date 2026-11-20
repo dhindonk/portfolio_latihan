@@ -59,3 +59,103 @@ if (!loader || prefersReducedMotion || typeof gsap === "undefined") {
     });
   }
 }
+
+// ==========================================
+// Navigasi & Penanda Bagian Aktif (ScrollSpy)
+// ==========================================
+const siteHeader = document.querySelector(".site-header");
+const navLinks = document.querySelectorAll(".main-nav .nav-link");
+const wordmark = document.querySelector(".wordmark");
+const sections = [
+  document.getElementById("contact"),
+  document.getElementById("projects"),
+  document.getElementById("about"),
+  document.getElementById("home")
+].filter(Boolean);
+
+function updateActiveNav() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+  const headerOffset = 120;
+
+  // Toggle header border/background saat discroll
+  if (siteHeader) {
+    if (scrollY > 10) {
+      siteHeader.classList.add("is-scrolled");
+    } else {
+      siteHeader.classList.remove("is-scrolled");
+    }
+  }
+
+  // Jika sudah dekat bagian paling bawah -> aktifkan section kontak
+  if (scrollY + windowHeight >= docHeight - 40) {
+    setActiveNav("contact");
+    return;
+  }
+
+  // Jika di paling atas (hero/home)
+  if (scrollY < 120) {
+    setActiveNav("home");
+    return;
+  }
+
+  // Cari section mana yang posisinya sedang dibaca
+  for (const section of sections) {
+    const top = section.offsetTop - headerOffset;
+    if (scrollY >= top) {
+      setActiveNav(section.id);
+      return;
+    }
+  }
+
+  setActiveNav(null);
+}
+
+function setActiveNav(activeId) {
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    const isCurrent = activeId && href === `#${activeId}`;
+
+    if (isCurrent) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.classList.remove("is-active");
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+// Pasang event listener scroll dengan requestAnimationFrame
+let scrollTicking = false;
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        updateActiveNav();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  },
+  { passive: true }
+);
+
+window.addEventListener("resize", updateActiveNav, { passive: true });
+updateActiveNav();
+
+// Beri respons visual langsung saat tautan navigasi diklik
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("href")?.replace("#", "");
+    if (targetId) {
+      setActiveNav(targetId);
+    }
+  });
+});
+
+wordmark?.addEventListener("click", () => {
+  setActiveNav("home");
+});

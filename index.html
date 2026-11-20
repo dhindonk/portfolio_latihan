@@ -94,9 +94,16 @@
 
         <div class="project-list">
           <article class="project">
-            <a class="project__visual project__visual--pasar" href="mailto:halo@Fajar.dev?subject=Pasar%20Pagi" aria-label="Tanya tentang proyek Pasar Pagi">
+            <a class="project__visual project__visual--pasar" href="mailto:fajarmfauzann@gmail.com?subject=Pasar%20Pagi" aria-label="Tanya tentang proyek Pasar Pagi">
               <div class="market-card">
-                <span class="market-card__top">PASAR PAGI <span>EST. 2023</span></span>
+                <div class="card-component-header">
+                  <span class="market-card__top">PASAR PAGI <span>EST. 2023</span></span>
+                  <div class="card-chips-row">
+                    <span class="card-chip">Pasar Komunitas</span>
+                    <span class="card-status"><span class="badge-dot"></span>Panen Hari Ini</span>
+                  </div>
+                </div>
+
                 <div class="market-card__illustration" aria-hidden="true">
                   <svg viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="market-svg">
                     <circle cx="132" cy="22" r="6" fill="#d65d3a" fill-opacity="0.25"/>
@@ -108,15 +115,31 @@
                     <path d="M62 33V29M58 32C60 30 64 30 66 32" stroke="#566c4c" stroke-width="1.5" stroke-linecap="round"/>
                     <path d="M96 36L112 55L102 55Z" fill="#d65d3a" fill-opacity="0.2" stroke="#d65d3a" stroke-width="1.5" stroke-linejoin="round"/>
                     <path d="M96 36C95 28 100 24 104 22M96 36C91 30 90 24 88 22" stroke="#566c4c" stroke-width="1.4" stroke-linecap="round"/>
+                    <!-- Basket Handle -->
                     <path d="M46 54C46 28 114 28 114 54" stroke="#566c4c" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Woven Basket Body -->
                     <path d="M36 54H124C122 78 112 94 80 94C48 94 38 78 36 54Z" fill="#f7f2e8" stroke="#31392d" stroke-width="1.5" stroke-linejoin="round"/>
                     <rect x="32" y="50" width="96" height="6" rx="3" fill="#e8e2d3" stroke="#31392d" stroke-width="1.5"/>
                     <path d="M50 56L55 90M70 56L72 94M90 56L88 94M110 56L105 90" stroke="#31392d" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round"/>
                     <path d="M40 68H120M44 80H116" stroke="#31392d" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round"/>
+                    <!-- Price Tag Component -->
+                    <g class="market-price-tag">
+                      <rect x="106" y="68" width="44" height="18" rx="3" fill="#31392d"/>
+                      <text x="111" y="80" font-size="7" font-weight="700" fill="#f7f2e8" font-family="sans-serif">Rp 12k/kg</text>
+                    </g>
                   </svg>
                 </div>
-                <p>Belanja dekat,<br>kenal yang jual.</p>
-                <span class="market-card__button">Cari pasar
+
+                <div class="card-component-body">
+                  <p>Belanja dekat,<br>kenal yang jual.</p>
+                  <div class="market-meta-row">
+                    <span class="meta-tag">14 Petani Aktif</span>
+                    <span class="meta-tag">Sayur Organik</span>
+                  </div>
+                </div>
+
+                <span class="market-card__button">
+                  <span>Cari pasar terdekat</span>
                   <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -142,19 +165,35 @@
           <article class="project">
             <a class="project__visual project__visual--ruang" href="mailto:fajarmfauzann@gmail.com?subject=Ruang%20Dengar" aria-label="Tanya tentang proyek Ruang Dengar">
               <div class="listen-card">
-                <span class="listen-card__top">RUANG DENGAR <span>VOL. 04</span></span>
+                <div class="card-component-header">
+                  <span class="listen-card__top">RUANG DENGAR <span>VOL. 04</span></span>
+                  <div class="card-chips-row">
+                    <span class="card-chip">Field Recording</span>
+                    <span class="card-status"><span class="rec-dot"></span>03:42 / AMBIENT</span>
+                  </div>
+                </div>
+
                 <div class="listen-card__illustration" aria-hidden="true">
                   <svg viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="listen-svg">
-                    <path d="M8 44C13 44 11 58 16 58C21 58 19 44 24 44" stroke="#566c4c" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M136 44C141 44 139 58 144 58C149 58 147 44 152 44" stroke="#566c4c" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Dynamic Waveforms with class for CSS animation -->
+                    <g class="listen-waves-left">
+                      <line x1="8" y1="44" x2="8" y2="60" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-1"/>
+                      <line x1="13" y1="38" x2="13" y2="66" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-2"/>
+                      <line x1="18" y1="48" x2="18" y2="56" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-3"/>
+                    </g>
+                    <g class="listen-waves-right">
+                      <line x1="142" y1="48" x2="142" y2="56" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-3"/>
+                      <line x1="147" y1="38" x2="147" y2="66" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-2"/>
+                      <line x1="152" y1="44" x2="152" y2="60" stroke="#566c4c" stroke-width="2" stroke-linecap="round" class="listen-wave-bar bar-1"/>
+                    </g>
                     <rect x="22" y="16" width="116" height="74" rx="6" fill="#dedbd0" stroke="#354331" stroke-width="1.5"/>
                     <rect x="30" y="24" width="100" height="42" rx="4" fill="#f0eee5" stroke="#566c4c" stroke-width="1.2" stroke-dasharray="3 2"/>
                     <line x1="30" y1="33" x2="130" y2="33" stroke="#566c4c" stroke-width="1" stroke-opacity="0.3"/>
-                    <text x="36" y="31" font-size="6" font-family="sans-serif" font-weight="700" fill="#566c4c" letter-spacing="0.1em">TAPE 04 • AMBIENT</text>
+                    <text x="36" y="31" font-size="6" font-family="sans-serif" font-weight="700" fill="#566c4c" letter-spacing="0.1em">TAPE 04 • KOTA SUKABUMI</text>
                     <rect x="46" y="37" width="68" height="22" rx="3" fill="#354331" fill-opacity="0.08" stroke="#354331" stroke-width="1.2"/>
-                    <circle cx="58" cy="48" r="7" stroke="#354331" stroke-width="1.2" fill="#dedbd0"/>
+                    <circle cx="58" cy="48" r="7" stroke="#354331" stroke-width="1.2" fill="#dedbd0" class="tape-reel"/>
                     <circle cx="58" cy="48" r="2.5" fill="#354331"/>
-                    <circle cx="102" cy="48" r="7" stroke="#354331" stroke-width="1.2" fill="#dedbd0"/>
+                    <circle cx="102" cy="48" r="7" stroke="#354331" stroke-width="1.2" fill="#dedbd0" class="tape-reel"/>
                     <circle cx="102" cy="48" r="2.5" fill="#354331"/>
                     <line x1="65" y1="48" x2="95" y2="48" stroke="#566c4c" stroke-width="1.8"/>
                     <path d="M40 90L50 74H110L120 90Z" fill="#d2cec1" stroke="#354331" stroke-width="1.2" stroke-linejoin="round"/>
@@ -162,8 +201,14 @@
                     <circle cx="100" cy="82" r="2.5" fill="#566c4c"/>
                   </svg>
                 </div>
-                <p>Tempat untuk<br>berhenti sebentar.</p>
-                <span class="listen-card__play" aria-hidden="true">▶</span>
+
+                <div class="card-component-body">
+                  <p>Tempat untuk<br>berhenti sebentar.</p>
+                  <div class="listen-controller-bar">
+                    <span class="track-info">Suara Hujan & Pasar Tradisional</span>
+                    <span class="listen-card__play" aria-hidden="true">▶</span>
+                  </div>
+                </div>
               </div>
               <span class="visual-caption">Pita arsip suara & pemutar audio ambien kota (2023)</span>
             </a>
@@ -181,34 +226,76 @@
             </div>
           </article>
 
-          <article class="project">
-            <a class="project__visual project__visual--lintas" href="mailto:fajarmfauzann@gmail.com ?subject=Lintas%20Jalan" aria-label="Tanya tentang proyek Lintas Jalan">
-              <div class="route-card">
-                <span class="route-card__top">LINTAS JALAN <span>JALAN KAKI CLUB</span></span>
-                <div class="route-card__illustration" aria-hidden="true">
-                  <svg viewBox="0 0 160 115" fill="none" xmlns="http://www.w3.org/2000/svg" class="route-svg">
-                    <rect x="16" y="14" width="34" height="26" rx="2" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
-                    <rect x="58" y="14" width="42" height="26" rx="2" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
-                    <rect x="108" y="14" width="36" height="42" rx="2" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
-                    <rect x="16" y="48" width="46" height="50" rx="2" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
-                    <rect x="70" y="68" width="44" height="34" rx="2" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
-                    <path d="M26 88C26 62 52 62 52 44C52 28 86 28 86 52C86 78 126 78 126 94" stroke="#d65d3a" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
-                    <circle cx="26" cy="88" r="4.5" fill="#f2f3ed" stroke="#d65d3a" stroke-width="2"/>
-                    <circle cx="26" cy="88" r="1.5" fill="#d65d3a"/>
-                    <text x="34" y="90" font-size="7" font-weight="700" fill="#293c3e" font-family="sans-serif">MULAI</text>
-                    <circle cx="86" cy="52" r="3.5" fill="#566c4c" stroke="#f2f3ed" stroke-width="1"/>
-                    <text x="74" y="46" font-size="6.5" font-weight="600" fill="#566c4c" font-family="sans-serif">Gg. Rukun</text>
-                    <circle cx="126" cy="94" r="4.5" fill="#293c3e" stroke="#f2f3ed" stroke-width="1.5"/>
-                    <text x="98" y="106" font-size="7" font-weight="700" fill="#293c3e" font-family="sans-serif">SAMPAI</text>
-                  </svg>
+          <article class="project project--featured">
+            <a class="project__visual project__visual--lintas" href="mailto:fajarmfauzann@gmail.com?subject=Lintas%20Jalan" aria-label="Tanya tentang proyek Lintas Jalan">
+              <div class="route-card route-card--featured">
+                <div class="route-card__left">
+                  <div class="card-component-header">
+                    <span class="route-card__top">LINTAS JALAN <span>FOOTPATH CLUB</span></span>
+                    <div class="card-chips-row">
+                      <span class="card-chip">Rute Kurasi 02</span>
+                      <span class="card-status"><span class="badge-dot"></span>Jalur Ramah Pejalan</span>
+                    </div>
+                  </div>
+
+                  <div class="route-card__illustration" aria-hidden="true">
+                    <svg viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="route-svg route-svg--panorama">
+                      <!-- Grid blocks -->
+                      <rect x="12" y="14" width="46" height="30" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="68" y="14" width="56" height="30" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="134" y="14" width="48" height="44" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="190" y="14" width="38" height="34" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="12" y="54" width="62" height="52" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="84" y="74" width="54" height="34" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+                      <rect x="148" y="68" width="80" height="40" rx="3" stroke="#bbc8c5" stroke-width="1" stroke-dasharray="2 2" fill="#e5e8e1"/>
+
+                      <!-- Animated Dash Walking Path -->
+                      <path d="M24 96C24 64 64 64 64 42C64 24 104 24 104 54C104 84 158 84 158 50C158 26 210 26 210 88" 
+                            stroke="#d65d3a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 4" class="route-trail-line"/>
+
+                      <!-- Waypoint 1: Start -->
+                      <circle cx="24" cy="96" r="5" fill="#f2f3ed" stroke="#d65d3a" stroke-width="2"/>
+                      <circle cx="24" cy="96" r="2" fill="#d65d3a"/>
+                      <text x="32" y="99" font-size="7.5" font-weight="700" fill="#293c3e" font-family="sans-serif">01. ALUN-ALUN</text>
+
+                      <!-- Waypoint 2: Midpoint -->
+                      <circle cx="104" cy="54" r="4.5" fill="#566c4c" stroke="#f2f3ed" stroke-width="1.5"/>
+                      <text x="94" y="44" font-size="7" font-weight="600" fill="#566c4c" font-family="sans-serif">02. GG. RUKUN (KOPI)</text>
+
+                      <!-- Waypoint 3: End -->
+                      <circle cx="210" cy="88" r="5" fill="#293c3e" stroke="#f2f3ed" stroke-width="2"/>
+                      <circle cx="210" cy="88" r="2" fill="#d65d3a"/>
+                      <text x="175" y="104" font-size="7.5" font-weight="700" fill="#293c3e" font-family="sans-serif">03. TAMAN SENJA</text>
+                    </svg>
+                  </div>
                 </div>
-                <p>Kenali kota<br>dengan berjalan.</p>
-                <span class="route-card__distance">3.2 KM
-                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
+
+                <div class="route-card__right">
+                  <p class="route-card__quote">Kenali kota<br>dengan berjalan.</p>
+                  
+                  <div class="route-telemetry-grid">
+                    <div class="telemetry-box">
+                      <span class="telemetry-num">3.2<small>KM</small></span>
+                      <span class="telemetry-lbl">Jarak Tempuh</span>
+                    </div>
+                    <div class="telemetry-box">
+                      <span class="telemetry-num">45<small>MNT</small></span>
+                      <span class="telemetry-lbl">Tempo Santai</span>
+                    </div>
+                    <div class="telemetry-box">
+                      <span class="telemetry-num">3<small>TITIK</small></span>
+                      <span class="telemetry-lbl">Persinggahan</span>
+                    </div>
+                  </div>
+
+                  <span class="route-card__distance">
+                    <span>Lihat panduan rute lengkap</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
               </div>
               <span class="visual-caption">Peta panduan jalan kaki & kurasi sudut kota (2022)</span>
             </a>

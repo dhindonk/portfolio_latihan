@@ -326,18 +326,80 @@
           <span class="footer__label">Ada ide yang ingin dirapikan?</span>
           <h2>Kita mulai<br><em>dari obrolan.</em></h2>
         </div>
-        <a class="footer__email" href="mailto:halo@fahdin.dev">halo@fahdin.dev
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <div class="footer__action">
+          <div class="email-box">
+            <a class="footer__email" href="mailto:halo@fahdin.dev">halo@fahdin.dev
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button class="btn-copy-email" id="copyEmailBtn" type="button" aria-label="Salin alamat email">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>Salin</span>
+            </button>
+            <span class="copy-toast" id="copyToast" aria-live="polite">Tersalin!</span>
+          </div>
+          <p class="footer__note">Biasanya membalas dalam 1–2 hari kerja untuk proyek desain maupun pengembangan frontend.</p>
+        </div>
       </div>
+
+      <!-- Saluran Komunikasi (Contact Channels) -->
+      <div class="contact-channels">
+        <article class="channel-card">
+          <span class="channel-card__label">Surel Utama</span>
+          <h3>Email Bisnis</h3>
+          <p>Kirimkan brief proyek, rancangan ide, atau tawaran kolaborasi secara terstruktur.</p>
+          <a class="channel-card__link" href="mailto:halo@fahdin.dev">
+            <span>halo@fahdin.dev</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="channel-card">
+          <span class="channel-card__label">Diskusi Cepat</span>
+          <h3>Discord Komunitas</h3>
+          <p>Mau ngobrol santai seputar desain, teknologi web, atau sekadar bertukar kabar.</p>
+          <a class="channel-card__link" href="https://discord.com/" target="_blank" rel="noreferrer">
+            <span>Gabung Discord</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </article>
+
+        <article class="channel-card">
+          <span class="channel-card__label">Jejaring Karir</span>
+          <h3>LinkedIn Profil</h3>
+          <p>Terhubung secara profesional untuk melihat rekam jejak kerja dan rekomendasi.</p>
+          <a class="channel-card__link" href="https://www.linkedin.com/in/fajar-muhammad-fauzan-30a613221/" target="_blank" rel="noreferrer">
+            <span>Lihat LinkedIn</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </article>
+      </div>
+
       <div class="footer__bottom">
-        <a class="wordmark" href="#home">Fajar<span>.</span></a>
-        <p>Dirancang dan dirakit dengan tenang di Sukabumi.</p>
+        <a class="wordmark" href="#home" aria-label="Fahdin, kembali ke awal">fahdin<span>.</span></a>
+        <p>Dirancang dan dirakit dengan tenang di Bandung, Indonesia.</p>
         <div class="footer__links">
-          <a href="https://discord.com/" target="_blank" rel="noreferrer">Discord
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram
             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -349,7 +411,20 @@
               <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
+          <a href="https://discord.com/" target="_blank" rel="noreferrer">Discord
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 7.5L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 6.18812C8 6.18812 16.048 5.50912 17.27 6.73112C18.49 7.95212 17.812 16.0001 17.812 16.0001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
+        <a href="#home" class="footer__back-to-top" aria-label="Kembali ke atas halaman">
+          <span>Ke atas</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 19V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5 12L12 5L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
         <span class="footer__year">© 2025</span>
       </div>
     </footer>

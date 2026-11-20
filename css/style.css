@@ -1686,3 +1686,425 @@ footer[id] {
     padding-top: 16px;
   }
 }
+
+
+/* ==========================================================================
+   Modern Cyber Grid, Canvas Background & Dark Glassmorphism Theme
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0d110f;
+  --bg-surface: #141a17;
+  --bg-glass-card: rgba(18, 24, 21, 0.82);
+  --border-glass: rgba(243, 241, 235, 0.09);
+  --border-glass-hover: rgba(243, 241, 235, 0.2);
+  --text-primary: #f3f1eb;
+  --text-muted: #94a397;
+  --text-dim: #6d7b70;
+  --moss: #759567;
+  --clay: #e26d48;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Layer container untuk animasi latar */
+.background-effects {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cyber-grid {
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(to right, rgba(243, 241, 235, 0.038) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(243, 241, 235, 0.038) 1px, transparent 1px);
+  background-size: 54px 54px;
+  transform: perspective(600px) rotateX(45deg);
+  transform-origin: center top;
+  animation: gridPerspectiveScroll 24s linear infinite;
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 35%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 35%, black 20%, transparent 80%);
+  z-index: 1;
+}
+
+@keyframes gridPerspectiveScroll {
+  0% {
+    transform: perspective(600px) rotateX(45deg) translateY(0);
+  }
+  100% {
+    transform: perspective(600px) rotateX(45deg) translateY(54px);
+  }
+}
+
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.24;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatAmbient 18s ease-in-out infinite alternate;
+}
+
+.ambient-glow--one {
+  top: -8%;
+  left: 10%;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #759567 0%, transparent 70%);
+}
+
+.ambient-glow--two {
+  bottom: 12%;
+  right: 5%;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, #e26d48 0%, transparent 70%);
+  animation-duration: 22s;
+  animation-delay: -6s;
+}
+
+@keyframes floatAmbient {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 35px) scale(1.15);
+  }
+  100% {
+    transform: translate(-35px, 50px) scale(0.92);
+  }
+}
+
+/* Memastikan konten berada di atas efek kanvas & grid */
+.site-header,
+main,
+.site-footer,
+.site-header-wrap {
+  position: relative;
+  z-index: 5;
+}
+
+/* Header & Glass Nav */
+.site-header {
+  background: rgba(13, 17, 15, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+}
+
+.wordmark {
+  color: var(--text-primary);
+}
+
+.main-nav a {
+  color: var(--text-muted);
+}
+
+.main-nav a:hover,
+.main-nav a.is-active {
+  color: var(--text-primary);
+}
+
+/* Tipografi & Konten Dark Mode */
+.hero h1,
+.about h2,
+.projects__heading h2,
+.footer__lead h2 {
+  color: var(--text-primary);
+}
+
+.hero h1 em,
+.about h2 em,
+.projects__heading h2 em,
+.footer__lead h2 em {
+  color: var(--moss);
+}
+
+.hero__eyebrow p,
+.hero__aside p,
+.hero__bottom,
+.about__copy p,
+.projects__heading p,
+.footer__label,
+.footer__bottom p {
+  color: var(--text-muted);
+}
+
+.eyebrow-line {
+  background: var(--clay);
+}
+
+.about__details > div {
+  border-top: 1px solid var(--border-glass);
+}
+
+.about__details span {
+  color: var(--text-dim);
+}
+
+.about__details p {
+  color: var(--text-primary);
+}
+
+.text-link {
+  color: var(--clay);
+  border-bottom: 1px solid rgba(226, 109, 72, 0.4);
+}
+
+.text-link:hover {
+  border-color: var(--clay);
+}
+
+/* Loader Dark Mode */
+.loader {
+  background: #0d110f;
+  color: var(--text-primary);
+}
+
+.loader__track {
+  background: rgba(243, 241, 235, 0.12);
+}
+
+.loader__track span {
+  background: var(--moss);
+}
+
+/* Dark Glassmorphism pada Kartu Karya */
+.project__visual {
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+}
+
+.project__visual--pasar {
+  background: radial-gradient(circle at 50% 30%, rgba(227, 163, 95, 0.16), rgba(13, 17, 15, 0.95));
+}
+
+.project__visual--ruang {
+  background: radial-gradient(circle at 50% 30%, rgba(117, 149, 103, 0.18), rgba(13, 17, 15, 0.95));
+}
+
+.project__visual--lintas {
+  background: radial-gradient(circle at 50% 30%, rgba(85, 120, 130, 0.18), rgba(13, 17, 15, 0.95));
+}
+
+.market-card,
+.listen-card,
+.route-card {
+  background: rgba(18, 24, 21, 0.85) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(243, 241, 235, 0.11) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(243, 241, 235, 0.05);
+}
+
+.project__visual:hover .market-card,
+.project__visual:hover .listen-card,
+.project__visual:hover .route-card {
+  border-color: rgba(243, 241, 235, 0.22) !important;
+  box-shadow: 0 24px 44px -10px rgba(0, 0, 0, 0.8), 0 0 20px -4px rgba(117, 149, 103, 0.25);
+}
+
+.market-card__top,
+.listen-card__top,
+.route-card__top {
+  color: var(--text-muted);
+}
+
+.market-card__top span,
+.listen-card__top span,
+.route-card__top span {
+  color: var(--text-dim);
+}
+
+.market-card > p,
+.listen-card > p,
+.route-card > p,
+.route-card__quote {
+  color: var(--text-primary) !important;
+}
+
+.card-chip {
+  background: rgba(243, 241, 235, 0.08);
+  color: var(--text-muted);
+}
+
+.meta-tag {
+  border-color: rgba(243, 241, 235, 0.12);
+  color: var(--text-muted);
+}
+
+.market-card__button,
+.route-card__distance {
+  border-top: 1px solid rgba(243, 241, 235, 0.1);
+  color: var(--text-muted);
+}
+
+.visual-caption {
+  color: var(--text-muted);
+}
+
+.project__info h3 {
+  color: var(--text-primary);
+}
+
+.project__info > p {
+  color: var(--text-muted);
+}
+
+.project__arrow {
+  color: var(--text-muted);
+}
+
+.project__arrow:hover {
+  color: var(--clay);
+}
+
+/* Lintas Jalan Featured Card Dark Polish */
+.route-card__right {
+  border-left: 1px dashed rgba(243, 241, 235, 0.12);
+}
+
+.telemetry-box {
+  background: rgba(243, 241, 235, 0.04);
+  border: 1px solid rgba(243, 241, 235, 0.08);
+}
+
+.telemetry-num {
+  color: var(--text-primary);
+}
+
+.telemetry-lbl {
+  color: var(--text-dim);
+}
+
+/* Ruang Dengar Dark Polish */
+.listen-controller-bar {
+  border-top: 1px solid rgba(243, 241, 235, 0.1);
+}
+
+.listen-card__play {
+  border-color: var(--moss);
+  color: var(--moss);
+}
+
+/* Footer Dark Mode Polish */
+.site-footer {
+  border-top: 1px solid var(--border-glass);
+}
+
+.footer__top {
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.footer__email {
+  color: var(--text-primary);
+}
+
+.footer__links a {
+  color: var(--text-muted);
+}
+
+.footer__links a:hover {
+  color: var(--clay);
+}
+
+.footer__year {
+  color: var(--text-dim);
+}
+
+.contact-status {
+  background: rgba(117, 149, 103, 0.12);
+  border: 1px solid rgba(117, 149, 103, 0.25);
+  color: var(--moss);
+}
+
+.status-dot {
+  background: var(--moss);
+}
+
+/* Dark Glass Overrides for Header, Channels, & Controls */
+.site-header-wrap {
+  background: rgba(13, 17, 15, 0.82) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+}
+
+.site-header-wrap.is-scrolled {
+  background: rgba(13, 17, 15, 0.92) !important;
+  border-bottom-color: rgba(243, 241, 235, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+.main-nav .nav-link::before {
+  background: rgba(243, 241, 235, 0.1) !important;
+}
+
+.main-nav .nav-link::after {
+  background: rgba(243, 241, 235, 0.1) !important;
+  box-shadow: 13px -3px 0 3px rgba(243, 241, 235, 0.1), 26px 1px 0 0px rgba(243, 241, 235, 0.1) !important;
+}
+
+.channel-card {
+  background: rgba(20, 26, 23, 0.65) !important;
+  border: 1px solid var(--border-glass) !important;
+  color: var(--text-primary) !important;
+}
+
+.channel-card:hover {
+  background: rgba(26, 35, 30, 0.88) !important;
+  border-color: rgba(243, 241, 235, 0.22) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.channel-card__value {
+  color: var(--text-primary) !important;
+}
+
+.btn-copy-email {
+  background: rgba(243, 241, 235, 0.08) !important;
+  border: 1px solid var(--border-glass) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-copy-email:hover {
+  background: rgba(243, 241, 235, 0.15) !important;
+  border-color: var(--clay) !important;
+  color: var(--clay) !important;
+}
+
+/* Responsif Media Query untuk Cyber Grid */
+@media (max-width: 820px) {
+  .cyber-grid {
+    background-size: 40px 40px;
+  }
+  .ambient-glow--one,
+  .ambient-glow--two {
+    width: 380px;
+    height: 380px;
+    filter: blur(90px);
+  }
+}

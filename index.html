@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f3f1eb">
+    <meta name="theme-color" content="#0d110f">
     <meta
       name="description"
       content="Portofolio Fajar, seorang desainer dan frontend developer yang suka bikin hal sederhana terasa pas."
@@ -16,21 +16,29 @@
         theme: {
           extend: {
             colors: {
-              paper: "#f3f1eb",
-              ink: "#202923",
-              moss: "#566c4c",
-              clay: "#d65d3a"
+              paper: "#0d110f",
+              ink: "#f3f1eb",
+              moss: "#759567",
+              clay: "#e26d48"
             }
           }
         }
       };
     </script>
   </head>
-  <body class="is-loading bg-white text-ink antialiased">
-    <div class="loader" aria-hidden="true">
+  <body class="is-loading bg-[#0d110f] text-[#f3f1eb] antialiased">
+        <div class="loader" aria-hidden="true">
       <p class="loader__word">sedang disiapkan</p>
       <span class="loader__number">00</span>
       <div class="loader__track"><span></span></div>
+    </div>
+
+    <!-- Animated Interactive Background -->
+    <div class="background-effects" aria-hidden="true">
+      <div class="ambient-glow ambient-glow--one"></div>
+      <div class="ambient-glow ambient-glow--two"></div>
+      <div class="cyber-grid"></div>
+      <canvas id="particle-canvas"></canvas>
     </div>
 
     <header class="site-header">

@@ -22,9 +22,9 @@ Buka `index.html` di browser. Tailwind CSS dan GSAP diambil dari CDN, jadi perlu
 4. [ ] **Ceritakan proses proyek.** Tambahkan latar belakang, peran, proses, dan hasil tanpa mengarang angka.
 5. [ ] **Buat visual proyek baru.** Ganti ilustrasi yang ada dengan visual berdasarkan bahan proyek dan beri keterangan yang jelas.
 6. [ ] **Rapikan navigasi di ponsel.** Pastikan semua tautan mudah digunakan dengan sentuhan dan keyboard.
-7. [ ] **Tunjukkan bagian yang sedang dibaca.** Buat penanda navigasi yang membantu pengunjung mengetahui posisinya.
+7. [x] **Tunjukkan bagian yang sedang dibaca.** Buat penanda navigasi yang membantu pengunjung mengetahui posisinya.
 8. [ ] **Tambahkan pengalaman.** Susun pengalaman kerja atau kolaborasi agar mudah dibaca.
-9. [ ] **Lengkapi informasi kontak.** Tambahkan cara menghubungi Fahdin dan pastikan tautan email tetap berfungsi.
+9. [x] **Lengkapi informasi kontak.** Tambahkan cara menghubungi Fahdin dan pastikan tautan email tetap berfungsi.
 10. [ ] **Periksa aksesibilitas.** Cek kontras, urutan judul, fokus keyboard, dan keterangan tautan.
 11. [ ] **Cek tampilan layar kecil.** Uji lebar 320 piksel dan posisi mendatar, lalu perbaiki bagian yang terpotong atau sulit dibaca.
 12. [ ] **Tambahkan ikon dan metadata halaman.** Siapkan ikon situs serta gambar dan teks untuk pratinjau tautan.
